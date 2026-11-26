@@ -1,0 +1,25 @@
+[package]
+name = "udemy-printer-certificate"
+version = "1.0.0"
+description = "Udemy Printer Certificate desktop base (Rust/Tauri + system WebView) with signed GitHub auto-updates and an Elixir sidecar slot, by A Elite Estrangeira."
+edition = "2021"
+
+[lib]
+name = "udemy_printer_certificate_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-updater = "2"
+tauri-plugin-process = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+log = "0.4"
+tauri-plugin-log = "2"
+
+[profile.release]
+lto = true
+codegen-units = 1

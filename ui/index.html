@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Udemy Printer Certificate</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="brand">
+      <img src="icon.png" alt="" class="brand-icon">
+      <div>
+        <h1>Udemy Printer Certificate</h1>
+        <p class="subtitle">Rust + system WebView shell &middot; <span id="version">v&hellip;</span></p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Updates</h2>
+      <p class="state">State: <strong id="upd-state">idle</strong></p>
+      <div class="progress"><div id="upd-bar"></div></div>
+      <div class="actions">
+        <button id="btn-check">Check for updates</button>
+        <button id="btn-download" disabled>Download and install</button>
+        <button id="btn-restart" class="hidden">Restart to update</button>
+      </div>
+      <pre id="upd-log" class="log"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Backend (Elixir sidecar)</h2>
+      <p class="state">Skeleton: <strong>minimal OTP app included in <code>backend/</code></strong></p>
+      <p class="hint">Following the NativeBeam architecture, the shell pairs
+      with a local Elixir/BEAM sidecar. The template ships a working
+      zero-dependency skeleton with a health endpoint on
+      <code>127.0.0.1:45900</code> — see <code>backend/README.md</code>.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

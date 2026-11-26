@@ -1,0 +1,18 @@
+# Rust / Tauri build output
+/src-tauri/target/
+
+# Elixir build output
+/backend/_build/
+/backend/deps/
+
+# Updater signing keys - NEVER commit a private key.
+*.key
+*.key.pub
+updater-private.key
+
+# Local tooling state
+/node_modules/
+.DS_Store
+
+# GPT Commander local edit backups
+*.bak-gptcommander
